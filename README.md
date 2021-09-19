@@ -37,8 +37,11 @@ fetch("https://raw.githubusercontent.com/gbaranski/quizizz-cheat/oldmethod/dist/
 1. Join Quiz
 2. In the URL field type this
 ```ts
-javascript:eval('fetch("https://raw.githubusercontent.com/DarkMatter999-dev/quizizz-cheat/master/dist/bundle.js").then((res)=>res.text().then((t)=>eval(t)))')
+javascript:fetch("https://raw.githubusercontent.com/DarkMatter999-dev/quizizz-cheat/oldmethod/dist/bundle.js").then((res)=>res.text().then((t)=>eval(t)))
 ```
+3. Enter the user name of any other player
+4. Correct answer will be highlighted
+
 
 
 ### Load automatically using Tampermonkey
