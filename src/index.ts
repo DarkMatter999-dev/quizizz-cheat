@@ -118,8 +118,10 @@ const getQuestionInfo = (): {
 (async () => {
   console.log(
     `%c
-  Script created by gbaranski#5119!
-  https://github.com/gbaranski/quizizz-cheat
+    Forked from gbaranski#5119!
+    https://github.com/gbaranski/quizizz-cheat
+
+    By DarkMatter999-dev
   `,
     "color: red;"
   );
