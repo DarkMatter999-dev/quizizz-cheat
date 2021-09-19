@@ -35,7 +35,6 @@ fetch("https://raw.githubusercontent.com/gbaranski/quizizz-cheat/oldmethod/dist/
 3. Enter the user name of any other player (he won't get points even if he sent a valid answer).
 4. Go to step 2
 
-<<<<<<< HEAD
 ## Using on Android(Chrome)
 1. Join Quiz
 2. In the URL field type this
@@ -45,10 +44,6 @@ javascript:fetch("https://raw.githubusercontent.com/DarkMatter999-dev/quizizz-ch
 3. Enter the user name of any other player
 4. Correct answer will be highlighted
 
-
-
-=======
->>>>>>> parent of cfda34b (Modified README.md for android support)
 ### Load automatically using Tampermonkey
 1. Install the browser extension on **https://www.tampermonkey.net/**
 2. Create a new user script and paste the contents of [scripts/tampermonkey-alternative-method.js](scripts/tampermonkey-alternative-method.js)
