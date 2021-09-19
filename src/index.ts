@@ -117,8 +117,8 @@ const getQuestionInfo = (): {
 
 (async () => {
   console.log(
-    `%c 
-  Script created by gbaranski#5119! 
+    `%c
+  Script created by gbaranski#5119!
   https://github.com/gbaranski/quizizz-cheat
   `,
     "color: red;"
@@ -127,49 +127,52 @@ const getQuestionInfo = (): {
     "Enter other player name here, he must take a part in quiz!"
   );
   if (!playerId) throw new Error("PlayerID not defined");
-  const questionInfo = getQuestionInfo();
-  // console.log({ questionID: questionInfo.id, roomHash: questionInfo.roomHash });
 
-  const request: ServerRequest = {
-    gameType: "live",
-    playerId,
-    powerupEffects: {
-      destroy: [],
-    },
-    questionId: questionInfo.id,
-    response: {
-      attempt: 0,
-      isEvaluated: false,
-      questionId: questionInfo.id,
-      questionType: "MSQ",
-      provisional: {
-        scoreBreakups: {
-          correct: {
-            base: 600,
-            powerups: [],
-            streak: 20,
-            timer: 0,
-            total: 500,
-          },
-          incorrect: {
-            base: 0,
-            powerups: [],
-            streak: 0,
-            timer: 0,
-            total: 0,
-          },
-        },
-        scores: {
-          correct: 600,
-          incorrect: 0,
-        },
-        teamAdjustments: [],
+  setInterval(() => {
+    const questionInfo = getQuestionInfo();
+    // console.log({ questionID: questionInfo.id, roomHash: questionInfo.roomHash });
+
+    const request: ServerRequest = {
+      gameType: "live",
+      playerId,
+      powerupEffects: {
+        destroy: [],
       },
-      response: [],
-      responseType: "original",
-      timeTaken: Math.floor(Math.random() * 10000),
-    },
-    roomHash: questionInfo.roomHash,
-  };
-  sendResponse(request);
+      questionId: questionInfo.id,
+      response: {
+        attempt: 0,
+        isEvaluated: false,
+        questionId: questionInfo.id,
+        questionType: "MSQ",
+        provisional: {
+          scoreBreakups: {
+            correct: {
+              base: 600,
+              powerups: [],
+              streak: 20,
+              timer: 0,
+              total: 500,
+            },
+            incorrect: {
+              base: 0,
+              powerups: [],
+              streak: 0,
+              timer: 0,
+              total: 0,
+            },
+          },
+          scores: {
+            correct: 600,
+            incorrect: 0,
+          },
+          teamAdjustments: [],
+        },
+        response: [],
+        responseType: "original",
+        timeTaken: Math.floor(Math.random() * 10000),
+      },
+      roomHash: questionInfo.roomHash,
+    };
+    sendResponse(request);
+  }, 500)
 })();
