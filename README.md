@@ -28,12 +28,18 @@ An alternative method is more invasive. Instead of fetching Quizizz API, it send
 1. Join quiz, wait for first question, and open console
 2. Paste this code to the console
 ```ts
-fetch("https://raw.githubusercontent.com/gbaranski/quizizz-cheat/oldmethod/dist/bundle.js")
-.then((res) => res.text()
-.then((t) => eval(t)))
+fetch("https://raw.githubusercontent.com/gbaranski/quizizz-cheat/oldmethod/dist/bundle.js").then((res) => res.text().then((t) => eval(t)))
 ```
 3. Enter the user name of any other player (he won't get points even if he sent a valid answer).
 4. Go to step 2
+
+## Using on Android(Chrome)
+1. Join Quiz
+2. In the URL field type this
+```ts
+javascript:eval('fetch("https://raw.githubusercontent.com/DarkMatter999-dev/quizizz-cheat/master/dist/bundle.js").then((res)=>res.text().then((t)=>eval(t)))')
+```
+
 
 ### Load automatically using Tampermonkey
 1. Install the browser extension on **https://www.tampermonkey.net/**
