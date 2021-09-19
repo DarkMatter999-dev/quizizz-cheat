@@ -28,7 +28,7 @@ const getQuestionsElement = () => {
 };
 
 const changeElementOpacity = (elem: HTMLElement) => {
-  elem.style.opacity = "20%";
+  elem.style.opacity = "10%";
 };
 
 const highlightAnswers = (question: QuizQuestion) => {
@@ -64,9 +64,9 @@ const getQuestionInfo = (): {
   if (!rootObject) throw new Error("Could not retrieve root object");
   const vue = rootObject.__vue__;
 
-  return { 
-    roomHash:   vue.$store._vm._data.$$state.game.data.roomHash, 
-    playerId:   vue.$store._vm._data.$$state.game.player.playerId, 
+  return {
+    roomHash:   vue.$store._vm._data.$$state.game.data.roomHash,
+    playerId:   vue.$store._vm._data.$$state.game.player.playerId,
     quizID:     vue.$store._vm._data.$$state.game.data.quizId,
     roomCode:   vue.$store._vm._data.$$state.game.data.roomCode,
     questionID: vue.$store._vm._data.$$state.game.questions.currentId,
@@ -81,9 +81,11 @@ const getRoomHash = (): string => {
   return vue.$store._vm._data.$$state.game.data.roomHash;
 }
 
-const msg = `%c 
-    Script created by gbaranski#5119! 
+const msg = `%c
+    Forked from gbaranski#5119!
     https://github.com/gbaranski/quizizz-cheat
+
+    By DarkMatter999-dev
       `;
 
 
